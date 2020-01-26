@@ -1,0 +1,48 @@
+.formContainer {
+    display:flex;
+    width:500px;
+    height:350px;
+    flex-wrap: wrap;
+    margin:auto;
+    padding:50px;
+    background-color:#e6c300;
+    margin-bottom:50px;
+    
+
+    .inputStyle {
+        border:2px solid black;
+        width:200px;
+        height:25px;
+    }
+
+    .textAreaStyle {
+        border:2px solid black;
+        width:300px;
+        height:100px;
+        margin:auto;
+    }
+
+    .labelTextArea {
+        margin:auto;
+    }
+
+    .buttonClass {
+        width:300px;
+        height:30px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:150px;
+        background-color:#00e600;
+        border:3px dotted #e6c300;
+        font-family: 'Press Start 2P', cursive;
+        font-size:15px;
+    }
+
+    .labelClass {
+      font-size:15px;
+      margin:10px;
+    }
+}

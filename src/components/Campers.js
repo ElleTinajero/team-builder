@@ -1,4 +1,5 @@
 import React from "react";
+import "./camperStyling.scss";
 
 const Campers = props => {
     console.log(props);
@@ -6,10 +7,10 @@ const Campers = props => {
         <div>
             {props.camperList.map((camper) => {
                 return (
-                    <div key={camper.id}>
-                        <h2>{camper.name}</h2>
-                        <h3>{camper.theme}</h3>
-                        <p>{camper.about}</p>
+                    <div className="camperContainers" key={camper.id}>
+                        <h2 className="nameContainer">{camper.name}</h2>
+                        <h3 className="themeContainer">{camper.theme}</h3>
+                        <p className="aboutContainer">{camper.about}</p>
                     </div>
                 )
             })}

@@ -1,0 +1,21 @@
+.camperContainers {
+    border:4px dotted black;
+    width:500px;
+    height:250px;
+    margin:auto;
+    margin-bottom:20px;
+    background-color:#e6c300;
+    opacity:75%;
+
+    .nameContainer {
+        color:#993300;
+    }
+
+    .themeContainer {
+        color:#00cc00;
+    }
+
+    .aboutContainer {
+        font-size:14px;
+    }
+}

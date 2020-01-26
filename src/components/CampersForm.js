@@ -1,13 +1,15 @@
 import React, {useState} from "react";
+import "./formStyling.scss";
 
 const CampersForm = props => {
     // const [name, setName] = useState("");
     // const [theme, setTheme] = useState("");
     // const [about, setAbout] = useState("");
     const [info, setInfo] = useState ("");
-    
+
     const submitForm = event => {
         event.preventDefault();
+        
         const newAnimal = {
         ...info,
         id: Date.now()
@@ -18,9 +20,10 @@ const CampersForm = props => {
     
     
     return (
-        <form onSubmit={submitForm}>
-            <label htmlFor="Name">Camper Name</label>
+        <form className="formContainer" onSubmit={submitForm}>
+            <label  className="labelClass" htmlFor="Name">Camper Name:</label>
             <input 
+                className="inputStyle"
                 type="text"
                 name="Name"    
                 value={info.name} 
@@ -29,8 +32,9 @@ const CampersForm = props => {
             }} />
         
 
-            <label htmlFor="Theme">Camper Theme</label>
+            <label className="labelClass" htmlFor="Theme">Camper Theme:</label>
             <input 
+                className="inputStyle"
                 type="text" 
                 name="Theme" 
                 value={info.theme} 
@@ -38,8 +42,9 @@ const CampersForm = props => {
                     setInfo({...info, theme : event.target.value});
                 }} />
         
-            <label htmlFor="About">About The Camper</label>
-            <textarea 
+            <label className="labelTextArea" htmlFor="About">About The Camper:</label>
+            <input 
+                className="textAreaStyle"
                 type="text" 
                 name="About" 
                 value={info.about} 
@@ -47,7 +52,9 @@ const CampersForm = props => {
                     setInfo({...info, about : event.target.value});
             }}/>
 
-            <button type="submit">Add to Camp List</button>
+            <div>
+                <button className="buttonClass" type="submit">Add to Camp List</button>
+            </div>
         </form>
     )
 }

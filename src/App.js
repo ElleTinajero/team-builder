@@ -1,8 +1,16 @@
 import React, { useState }from 'react';
-import './App.css';
+import './App.scss';
 import animalData from "./animalData";
 import Campers from "./components/Campers";
 import CampersForm from "./components/CampersForm";
+// import Background from "./components/backgroundimage.png";
+
+// var sectionStyle = {
+//   backgroundImage: "url(" + Background + ")",
+//   backgroundPosition: 'center',
+//   backgroundSize: 'fit',
+//   backgroundRepeat: 'no-repeat'
+// };
 
 function App() {
   const [campers, setCampers] = useState(animalData)
@@ -12,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>My Campers</h1>
+      <h1 className="campersClass" >My Campers</h1>
       <CampersForm addNewAnimal={addNewAnimal}/>
       <Campers camperList={campers}/>
     </div>
